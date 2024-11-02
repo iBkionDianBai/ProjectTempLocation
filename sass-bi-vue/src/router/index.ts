@@ -31,6 +31,18 @@ export const constantRoutes: RouteRecordRaw[] = [
       },
     ],
   },
+   {
+    path: "/DBdata",
+    component: Layout,
+    children: [
+      {
+        path: "index",
+        component: () => import("@/views/DBdata/index.vue"),
+        name: "DBdata",
+        meta: { title: "数仓数据概览", icon: "monitor" },
+      },
+    ],
+  },
   {
     path: "/dataExtraction",
     component: Layout,
@@ -48,6 +60,12 @@ export const constantRoutes: RouteRecordRaw[] = [
         component: () => import("@/views/dataExtraction/missionList.vue"),
         name: "missionList",
         meta: { title: "数据抽取任务列表", icon: "monitor" },
+      },
+       {
+        path: "index",
+        component: () => import("@/views/data-develop/index.vue"),
+        name: "datadevelop",
+        meta: { title: "数据开发任务列表", icon: "monitor" },
       },
     ],
   },
