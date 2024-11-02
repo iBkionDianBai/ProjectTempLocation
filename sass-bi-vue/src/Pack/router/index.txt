@@ -1,0 +1,14 @@
+{
+    path: "/DataSourceManager",
+    component: Layout,
+    meta: { title: "数据源管理", icon: "monitor" },
+    children: [
+      {
+        path: "/DataSourceManager",
+        component: () =>
+          import("@/views/DataSourceManager/DataSourceManager.vue"),
+        name: "dataSourceManager",
+        meta: { title: "数据源管理" },
+      },
+    ],
+  },
