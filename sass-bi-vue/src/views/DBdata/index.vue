@@ -1,6 +1,6 @@
 <!-- 数仓数据概览(未完成) -->
 <!-- 收藏、标签、详细信息、新建视图按钮的编辑没写 -->
-<!-- 新建表弹窗以及查看某表详细信息的弹窗都写在这个文件里 -->
+<!-- 新建表弹窗以及查看某表详细信息的弹窗都写在这个文件里，包括详细信息的字段信息也写在这里 -->
 <!-- 创建者: 黄云乔 1825207860@qq.com -->
 <template>
   <div class="app-container">
@@ -403,7 +403,7 @@
 
         <div id="content1" v-show="number == 0">
           <el-input
-            v-model="datainfo.keywords"
+            v-model="detailtableinfo.keywords"
             placeholder="请输入搜索内容"
             clearable
             style="width: 200px; margin-bottom: 10px"
@@ -431,7 +431,7 @@
             />
             <el-table-column
               label="描述"
-              prop="descriptions"
+              prop="description"
               align="center"
               min-width="150"
             />
@@ -443,15 +443,15 @@
             />
             <el-table-column
               label="是否允许为空"
-              align="ifCanBeNull"
+              align="center"
               width="150"
-              prop="layering"
+              prop="ifCanBeNull"
             />
             <el-table-column
               label="是否主键"
-              align="ifIsKey"
+              align="center"
               width="150"
-              prop="department"
+              prop="ifIsKey"
             />
             <el-table-column
               label="是否区分键"
@@ -486,8 +486,8 @@
           <pagination
             v-if="datainfoTotal"
             v-model:total="datainfoTotal"
-            v-model:page="datainfo.pageNum"
-            v-model:limit="datainfo.pageSize"
+            v-model:page="detailtableinfo.pageNum"
+            v-model:limit="detailtableinfo.pageSize"
             @pagination="fieldinfoQuery"
             style="margin-bottom: 0px"
           />
@@ -1476,7 +1476,7 @@ function fieldinfoQuery() {
     .then((data) => {
       fieldinformation.value = data.list;
       datainfoTotal.value = data.total;
-      console.log("ss");
+      console.log(fieldinformation);
     })
     .finally(() => {
       fieldinfoLoading.value = false;
