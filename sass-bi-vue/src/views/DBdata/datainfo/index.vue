@@ -1,3 +1,6 @@
+<!-- 数仓数据概览(未完成) -->
+<!-- 这个文件是某表详细信息下的操作-查看字段信息，其中的编辑功能没实现 -->
+<!-- 创建者: 黄云乔 1825207860@qq.com -->
 <template>
   <div class="app-container">
     <div class="table-container">
