@@ -716,9 +716,9 @@ import developAPI, {
   wronList,
   wronTableListQuery,
 } from "@/api/data-develop";
-import cleanComponent from "@/views/data-develop/clean/index.vue";
-import maskComponent from "@/views/data-develop/mask/index.vue";
-import standarComponent from "@/views/data-develop/standardization/index.vue";
+import cleanComponent from "@/views/dataExtraction/data-develop/clean/index.vue";
+import maskComponent from "@/views/dataExtraction/data-develop/mask/index.vue";
+import standarComponent from "@/views/dataExtraction/data-develop/standardization/index.vue";
 
 //清洗配置表
 const cleanRulesDialog = reactive({ visible: false });
