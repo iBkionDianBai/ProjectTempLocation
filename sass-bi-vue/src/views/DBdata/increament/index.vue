@@ -1,3 +1,6 @@
+<!-- 数仓数据概览(未完成) -->
+<!-- 这个文件是详细信息的历史增量功能，绘制趋势图 -->
+<!-- 创建者: 黄云乔 1825207860@qq.com -->
 <template>
   <div class="app-container">
     <div style="display: flex">
