@@ -1,5 +1,6 @@
-<!-- eslint-disable vue/no-template-shadow -->
-<!-- eslint-disable vue/valid-v-model -->
+<!-- 数仓数据概览(未完成) -->
+<!-- 收藏、标签、详细信息按钮的编辑没写 -->
+<!-- 创建者: 黄云乔 1825207860@qq.com -->
 <template>
   <div class="app-container">
     <div class="common-container">
