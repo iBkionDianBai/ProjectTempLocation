@@ -63,7 +63,7 @@ export const constantRoutes: RouteRecordRaw[] = [
       },
        {
         path: "index",
-        component: () => import("@/views/data-develop/index.vue"),
+        component: () => import("@/views/dataExtraction/data-develop/index.vue"),
         name: "datadevelop",
         meta: { title: "数据开发任务列表", icon: "monitor" },
       },
